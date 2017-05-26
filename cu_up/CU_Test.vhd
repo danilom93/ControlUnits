@@ -1,4 +1,3 @@
---This is a testbench which is used for the three control unit. There are just a couple of line to comment/uncomment. They are highlighted with comments.
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
@@ -12,13 +11,13 @@ architecture TEST of cu_test is
 
 	component dlx_cu is
 		generic	(
-					INSTRUCTIONS_EXECUTION_CYCLES : integer := 3;  -- Instructions Execution
-					MICROCODE_MEM_SIZE 	: integer := 61; -- Microcode Memory Size
-					RELOC_MEM_SIZE      : integer := 16;  -- Microcode Relocation
-					CW_SIZE 	        : integer := 13; -- Control Word Size
-					OP_CODE_SIZE        : integer := 6;        -- Op Code Size
-					FUNC_SIZE           : integer := 11;       -- Func Field Size for R-Type Ops
-					ALU_SELECT_SIZE 	    : integer := 2 -- Number of control wires for the alu_op_code
+					INSTRUCTIONS_EXECUTION_CYCLES : integer := 3;  	-- Instructions Execution
+					MICROCODE_MEM_SIZE 	: integer := 61; 			-- Microcode Memory Size
+					RELOC_MEM_SIZE      : integer := 16;  			-- Microcode Relocation
+					CW_SIZE 	        : integer := 13; 			-- Control Word Size
+					OP_CODE_SIZE        : integer := 6;        		-- Op Code Size
+					FUNC_SIZE           : integer := 11;       		-- Func Field Size for R-Type Ops
+					ALU_SELECT_SIZE 	    : integer := 2 			-- Number of control wires for the alu_op_code
 				);
 		port	(
 						Clk                       : in std_logic;
@@ -120,7 +119,6 @@ architecture TEST of cu_test is
         wait for 6 ns;
 
         -- ADDI1 RS1,RD,INP1
-		  report "this is a serious message" severity error;
         OP_CODE_s <= ITYPE_ADDI1;
         wait for 6 ns;
 
