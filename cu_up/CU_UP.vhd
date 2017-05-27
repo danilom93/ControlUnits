@@ -74,7 +74,7 @@ architecture arch of dlx_cu is
 -- to store words of 5 bits rather than words of 13 bits
 
 -- Another possibility is to store the entire word of 13 bits just one time, and use a sort
--- of mask combined with an and operation that brinks to zero all the signals not used inside each stage
+-- of mask combined with an and operation that brings to zero all the signals not used inside each stage
 
     signal microcode           : mem_array := ( "1110000000000", -- ADD_R
                                       			"0000100100000", -- ADD_R
